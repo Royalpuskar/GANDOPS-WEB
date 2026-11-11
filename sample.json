@@ -1,0 +1,7 @@
+{
+  "services": [
+    {"id":"gateway","name":"Public API Gateway","availability":99.97,"error_rate":0.1,"p95_ms":240,"dependencies":[]},
+    {"id":"identity","name":"Identity Service","availability":99.5,"error_rate":1.8,"p95_ms":450,"dependencies":["gateway"]},
+    {"id":"checkout","name":"Checkout Service","availability":97.5,"error_rate":5.2,"p95_ms":890,"dependencies":["identity"]}
+  ]
+}
