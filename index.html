@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081321">
+  <meta name="description" content="GANDOPS local operational readiness lab. Simulate reliability risk and explore service dependencies without uploading data.">
+  <title>GANDOPS — Operational Readiness Lab</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.mjs" type="module"></script>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" aria-label="Project sidebar">
+    <a class="brand" href="./"><span class="brandmark" aria-hidden="true">G/</span><span>GANDOPS<small>OPERATIONAL INTELLIGENCE</small></span></a>
+    <nav aria-label="Workspace">
+      <a class="active" href="#workbench"><span aria-hidden="true">◉</span> Readiness lab</a>
+      <a href="#method"><span aria-hidden="true">◇</span> Methodology</a>
+      <a href="https://github.com/Royalpuskar/GANDOPS-WEB"><span aria-hidden="true">↗</span> GitHub source</a>
+    </nav>
+    <div class="side-note"><span class="pulse"></span> Browser-only simulation<p>No telemetry, passwords, or infrastructure credentials required.</p></div>
+    <small class="foot">ROYALPUSKAR / RESEARCH BUILD</small>
+  </aside>
+  <main>
+    <header class="top"><span>OPERATIONS / READINESS ENGINE</span><span class="env">LOCAL EVALUATION <span aria-hidden="true">●</span></span></header>
+    <section class="intro">
+      <p class="eyebrow">RELIABILITY ENGINEERING · REPRODUCIBLE SCENARIOS</p>
+      <h1>See risk before<br><em>it becomes downtime.</em></h1>
+      <p class="lede">Explore how availability, error rates, latency, and dependency health affect a simulated service portfolio. Edit the JSON. Run a fresh analysis. Export your findings.</p>
+      <div class="actions"><a href="#workbench" class="btn primary">Open workbench <span aria-hidden="true">↗</span></a><a href="#method" class="btn subtle">How scoring works</a></div>
+    </section>
+    <section class="metrics" aria-label="Result summary">
+      <div class="metric primary-metric"><small>READINESS INDEX</small><strong id="readiness">—</strong><span id="readiness-note">Awaiting analysis</span></div>
+      <div class="metric"><small>HEALTHY SERVICES</small><strong id="healthy">—</strong><span>Within demonstration thresholds</span></div>
+      <div class="metric"><small>WATCH LIST</small><strong id="watch">—</strong><span>Investigate elevated risk</span></div>
+      <div class="metric"><small>CRITICAL SIGNALS</small><strong id="critical">—</strong><span>Priority for review</span></div>
+    </section>
+    <section id="workbench" class="workbench">
+      <div class="panel">
+        <div class="panel-header"><div><span class="section-index">01 / INPUT</span><h2>Scenario editor</h2></div><span class="chip">JSON</span></div>
+        <p class="hint">Synthetic data only. Each service includes an ID, name, availability %, error-rate %, P95 latency (ms), and optional dependencies.</p>
+        <label for="scenario" class="field-label">SERVICE SCENARIO</label>
+        <textarea id="scenario" spellcheck="false" aria-describedby="scenario-note"></textarea>
+        <p id="scenario-note" class="assist">Changes are local to this browser; nothing is uploaded.</p>
+        <div class="controls"><button id="run" class="btn primary" type="button">Run analysis</button><button id="sample" class="btn subtle" type="button">Load sample</button><button id="stress" class="btn subtle" type="button">Simulate incident</button></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div><span class="section-index">02 / OUTPUT</span><h2>Service priorities</h2></div><button class="btn export" id="export" type="button" disabled>Export JSON ↓</button></div>
+        <p class="hint">Deterministic, explainable scores. Severity is illustrative and should not be interpreted as live monitoring.</p>
+        <div id="status" class="status" role="status" aria-live="polite">Loading sample scenario…</div>
+        <div id="results" class="results" aria-live="polite"></div>
+      </div>
+    </section>
+    <section id="method" class="method">
+      <div><p class="eyebrow">TRANSPARENT BY DESIGN</p><h2>Method over mystery.</h2><p>GANDOPS is a client-side operations research demonstration. It does not connect to production environments or automatically detect actual incidents.</p></div>
+      <ol><li><b>Measure</b><span>Supply availability, errors, and P95 latency from a synthetic or authorized source.</span></li><li><b>Score</b><span>Apply visible, illustrative weights to identify rising operational risk.</span></li><li><b>Prioritize</b><span>Add dependency signals, sort service exposure, and export an inspectable report.</span></li></ol>
+    </section>
+    <footer>© Royalpuskar · GANDOPS research workbench · <a href="https://github.com/Royalpuskar/GANDOPS-WEB">View source</a></footer>
+  </main>
+</div>
+</body>
+</html>
