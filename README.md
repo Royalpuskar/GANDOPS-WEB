@@ -1,5 +1,13 @@
 # GANDOPS — Operational Readiness Lab
 
+<!-- portfolio-website:start -->
+## Website
+
+[Open GANDOPS-WEB website](https://royalpuskar.github.io/GANDOPS-WEB/)
+
+Intended GitHub Pages address; deployment has not been verified. If it does not load, GitHub Pages must be enabled for the root of the main branch.
+<!-- portfolio-website:end -->
+
 **Interactive, standalone, browser-based DevOps reliability simulator.**
 
 GANDOPS is a distinct Royalpuskar portfolio project demonstrating explainable scenario evaluation for service reliability, latency, errors and dependencies. It does **not** connect to live infrastructure or execute commands.
@@ -51,3 +59,10 @@ This is an **illustrative scoring method**, not an SRE standard, validated incid
 No keys, passwords, real customer data, or production telemetry are required. Nothing is uploaded by the application. Only use authorized or synthetic telemetry when experimenting. GitHub Pages can host this app as static files if repository Pages settings are enabled.
 
 **Author / Portfolio:** [Royalpuskar](https://github.com/Royalpuskar)
+
+
+<!-- portfolio-rights:start -->
+## Copyright
+
+© 2026 Puskar (Royalpuskar). All rights reserved for original project content, except where an applicable license grants permission. Third-party rights and notices remain with their owners.
+<!-- portfolio-rights:end -->
